@@ -181,6 +181,8 @@ https://hur.webmania.cc/
 **5** Meteorológiai API:
 
 https://open-meteo.com/en/docs
+Kisújszálláson ma milyen hőmérsékletek vannak?
+
 
 **6** Api-k listája:
 
