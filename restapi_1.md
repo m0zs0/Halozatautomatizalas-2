@@ -42,7 +42,7 @@ Attól függően, hogy milyen kéréssel (metódus) fordulunk a szerver felé, e
 
 
 ## Mit tartalmaz egy REST API hívás
-### URL:
+### URL
 A szerver minden erőforrást egyedi erőforrás-azonosítókkal azonosít. 
 A REST-szolgáltatások esetében a kiszolgáló általában egy egységes erőforrás-kereső (URL - Uniform Resource Locator) segítségével hajtja végre az erőforrás-azonosítást. 
 Az URL az erőforrás elérési útját adja meg. Az URL hasonló azon webhelyek címéhez, amelyet a böngészőben adunk meg bármely weboldal meglátogatásához. 
@@ -74,12 +74,15 @@ Egy termék törlése
 
 ### HTTP fejlécek
 A kérések fejlécei a kliens és a szerver közötti metaadatok. Például a kérés fejléce jelzi a kérés és a válasz formátumát, információt ad a kérés állapotáról stb:
+
 -Authorization: hitelesítési token felhasználó azonosításához
+
 -Content-Type: a küldött adatok formátumának meghatározása (pl. application/json)
 
 
 ### Adat
 A REST API kérések tartalmazhatnak adatokat a POST, PUT és más HTTP metódusok sikeres működéséhez.
+
 A JSON (JavaScript Object Notation) egy általános formátum az adatok REST API-n keresztül történő küldéséhez és kéréséhez.
 
 A JSON egy kulcs-érték párosokból felépülő objektum. Az előző webshopos példánál maradva egy termék a következőképpen nézhet ki JSON-ban:
@@ -111,13 +114,20 @@ A REST alapelvek megkövetelik, hogy a szerver válasza a következő fő össze
 Az állapotsor egy háromjegyű állapotkódot tartalmaz, amely a kérés sikerességét vagy sikertelenségét jelzi. Például a 2XX kód sikert jelez, de a 4XX és 5XX kód hibát jelez. A 3XX kódok az URL-átirányítást jelzik. Nézzük meg a főbb állapotkódokat:
  
 
-Állapotkódok és jelentésük
+**Állapotkódok és jelentésük**
+
 200: Ez a szokásos kód a sikeres HTTP kérésekre.
+
 201: Ez a szabványos válasz egy olyan HTTP-kérésre, amely egy elem sikeres létrehozását eredményezte.
+
 204: Ez is egy válasz sikeres HTTP-kérésekre, ahol a válasz törzsében nem ad vissza semmit.
+
 400: A kérést nem lehet feldolgozni rossz kérés szintaxis, túl nagy méret vagy más kliensoldali hiba miatt.
+
 403: A kliensnek nincs engedélye ehhez az erőforráshoz.
+
 404: Az erőforrás jelenleg nem található. Lehetséges, hogy törölték, vagy még nem is létezik.
+
 500: Általános válasz egy váratlan meghibásodásra, ha nem áll rendelkezésre pontosabb információ.
 
 A válasz törzs (body) tartalmazza az erőforrás-ábrázolást. A szerver a kérés fejlécek tartalma alapján választ ki egy megfelelő megjelenítési formátumot. Például a kliensek JSON formátumban kérhetnek információkat.
@@ -125,39 +135,21 @@ A válasz törzs (body) tartalmazza az erőforrás-ábrázolást. A szerver a k�
 
 Tesztelés:
 https://fakestoreapi.com/
+![KPO feladat megoldása](PICTURES/GET_products.PNG)
+![KPO feladat megoldása](PICTURES/GET_products_2.PNG)
+![KPO feladat megoldása](PICTURES/GET_products_carts.PNG)
+![KPO feladat megoldása](PICTURES/GET_products_categories.PNG)
+![KPO feladat megoldása](PICTURES/GET_products_category_electronics.PNG)
+![KPO feladat megoldása](PICTURES/GET_products_limit_5.PNG)
+![KPO feladat megoldása](PICTURES/POST_products.PNG)
+![KPO feladat megoldása](PICTURES/PATC_products_2.PNG)
+![KPO feladat megoldása](PICTURES/PUT_products_2.PNG)
+![KPO feladat megoldása](PICTURES/DELETE_products_1.PNG)
+
+
+
+
 https://reqres.in/
 https://fakerestapi.azurewebsites.net/index.html
  
 
-https://kiszervezettmarketing.hu/weboldal-keszites/rest-api/
-https://infojegyzet.hu/webszerkesztes/php/restapi/
- 
-Valami ilyesmit kellene csinálni:
-https://www.youtube.com/watch?v=GwSnAwsyhZY&list=PLHT5rv7PEE4N3ol8lBoxHBmzWvVW2UwmC&index=1
-
-https://projekt.sulipy.hu/api/api_alapok
-
-Bevezetés:
-https://www.youtube.com/watch?v=eVFngZkjTlU&list=PLsYGHuNuBZcYtP1KTqyDtahvFBc0SLKQi&index=1
-
-
-
-https://infojegyzet.hu/webszerkesztes/php/restapi/
-
-
-
-Keressük ki hogy 5310 irányítószám melyik város irányítószáma:
-https://hur.webmania.cc/
-
-https://hur.webmania.cc/zips/5310.json
-
-https://github.com/public-api-lists/public-api-lists
-
-https://open-meteo.com/en/docs
-
-autentikáció:
-https://requests.readthedocs.io/en/latest/
-
-REST API tesztelés
-https://www.youtube.com/watch?v=-lK-TZMrrHQ
-Insomnia
