@@ -1,10 +1,12 @@
 # API
 
 **Application Programming Interface**
+
 Alkalmazásunk felülete, amin keresztül tudunk vele kommunikálni
 
 # REST 
 **Representational State Transfer**
+
 Attól függően, hogy milyen kéréssel (metódus) fordulunk a szerver felé, ez alapján fogja a válaszát elkészíteni. Egyfajta adatátvitel, ami a http protokoll architektúrájára épül (kliens-szerver)
 
 # REST API:
