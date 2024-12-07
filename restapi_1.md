@@ -31,6 +31,10 @@ Attól függően, hogy milyen kéréssel (metódus) fordulunk a szerver felé, e
 
 
 **REST API-hívás általános lépései:**
+
+![KPO feladat megoldása](PICTURES/rest-json.png)
+
+
 1.	A kliens kérést küld a szervernek. Az ügyfél követi az API dokumentációját, hogy a kérést a szerver számára érthető módon formázza.
 2.	A szerver hitelesíti az ügyfelet, és megerősíti, hogy az ügyfélnek jogában áll a kérést benyújtani.
 3.	A szerver megkapja a kérést, és belsőleg feldolgozza.
