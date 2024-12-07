@@ -1,10 +1,3 @@
- _____     ______     ____    _______                  _____     _
-|  __ \   |  ____|   / ___|  |__   __|        /\      |  __ \   | |
-| |__) |  | |__     | |__       | |          /  \     | |__) |  | |
-|  _  /   |  __|     \__ \      | |         / /\ \    |  ___/   | |
-| | \ \   | |____    ___| |     | |        / ____ \   | |       | |
-|_|  \_\  |______|  |____/      |_|       /_/    \_\  |_|       |_|
-
 #API 
 **Application Programming Interface**
 Alkalmazásunk felülete, amin keresztül tudunk vele kommunikálni
