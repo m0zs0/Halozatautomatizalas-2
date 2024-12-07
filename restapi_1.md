@@ -1,4 +1,5 @@
-#API 
+#API
+
 **Application Programming Interface**
 Alkalmazásunk felülete, amin keresztül tudunk vele kommunikálni
 
