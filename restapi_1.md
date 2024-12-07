@@ -137,32 +137,32 @@ A válasz törzs (body) tartalmazza az erőforrás-ábrázolást. A szerver a k�
 
 VSC Thunder client
 
-![KPO feladat megoldása](PICTURES/ThundeClient.PNG)
+![Thunder client](PICTURES/ThunderClient.PNG)
 
 
 
 **1**
 https://fakestoreapi.com/
 
-![KPO feladat megoldása](PICTURES/GET_products.PNG)
+![GET](PICTURES/GET_products.PNG)
 
-![KPO feladat megoldása](PICTURES/GET_products_2.PNG)
+![GET](PICTURES/GET_products_2.PNG)
 
-![KPO feladat megoldása](PICTURES/GET_products_carts.PNG)
+![GET](PICTURES/GET_products_carts.PNG)
 
-![KPO feladat megoldása](PICTURES/GET_products_categories.PNG)
+![GET](PICTURES/GET_products_categories.PNG)
 
-![KPO feladat megoldása](PICTURES/GET_products_category_electronics.PNG)
+![GET](PICTURES/GET_products_category_electronics.PNG)
 
-![KPO feladat megoldása](PICTURES/GET_products_limit_5.PNG)
+![GET](PICTURES/GET_products_limit_5.PNG)
 
-![KPO feladat megoldása](PICTURES/POST_products.PNG)
+![POST](PICTURES/POST_products.PNG)
 
-![KPO feladat megoldása](PICTURES/PATC_products_2.PNG)
+![PATCH](PICTURES/PATC_products_2.PNG)
 
-![KPO feladat megoldása](PICTURES/PUT_products_2.PNG)
+![PUT](PICTURES/PUT_products_2.PNG)
 
-![KPO feladat megoldása](PICTURES/DELETE_products_1.PNG)
+![DELETE](PICTURES/DELETE_products_1.PNG)
 
 **2**
 https://reqres.in/
