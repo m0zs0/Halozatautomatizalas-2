@@ -182,6 +182,10 @@ https://hur.webmania.cc/
 
 https://open-meteo.com/en/docs
 
+**6** Api-k listája:
+
+https://github.com/public-api-lists/public-api-lists
+
  
 **Linkek:**
 
