@@ -9,12 +9,17 @@ Alkalmazásunk felülete, amin keresztül tudunk vele kommunikálni
 
 Attól függően, hogy milyen kéréssel (metódus) fordulunk a szerver felé, ez alapján fogja a válaszát elkészíteni. Egyfajta adatátvitel, ami a http protokoll architektúrájára épül (kliens-szerver)
 
-# REST API:
+# REST API
 -Egy olyan API, amely a REST elveit követi. Egy REST API-n keresztül egy alkalmazás lehetővé teszi más alkalmazások vagy szolgáltatások számára, hogy kommunikáljanak vele HTTP kérések segítségével. Ezek a kérések lehetnek GET, POST, PUT, DELETE (**C**reate**R**ead**U**pdate**D**elete) stb. parancsok, amelyek lehetővé teszik az adatok lekérését, módosítását, hozzáadását vagy törlését az adott alkalmazásban vagy szolgáltatásban 
+
 -Backend és frontend kód szétválasztása
+
 -2 végpont kommunikációja
+
 -A szerveroldalon endpoint(végpont) okat kell deklarálni pl: valami.hu/user, így a user-eket adja
+
 -Az API-fejlesztők a kiszolgálóalkalmazás API dokumentációjában elmagyarázzák, hogyan kell az ügyfélnek használnia a REST API-t.
+
 
 **REST API-hívás általános lépései:**
 1.	A kliens kérést küld a szervernek. Az ügyfél követi az API dokumentációját, hogy a kérést a szerver számára érthető módon formázza.
