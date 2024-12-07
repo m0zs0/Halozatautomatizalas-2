@@ -1,13 +1,13 @@
-#API
+# API
 
 **Application Programming Interface**
 Alkalmazásunk felülete, amin keresztül tudunk vele kommunikálni
 
-#REST 
+# REST 
 **Representational State Transfer**
 Attól függően, hogy milyen kéréssel (metódus) fordulunk a szerver felé, ez alapján fogja a válaszát elkészíteni. Egyfajta adatátvitel, ami a http protokoll architektúrájára épül (kliens-szerver)
 
-#REST API:
+# REST API:
 -Egy olyan API, amely a REST elveit követi. Egy REST API-n keresztül egy alkalmazás lehetővé teszi más alkalmazások vagy szolgáltatások számára, hogy kommunikáljanak vele HTTP kérések segítségével. Ezek a kérések lehetnek GET, POST, PUT, DELETE (**C**reate**R**ead**U**pdate**D**elete) stb. parancsok, amelyek lehetővé teszik az adatok lekérését, módosítását, hozzáadását vagy törlését az adott alkalmazásban vagy szolgáltatásban 
 -Backend és frontend kód szétválasztása
 -2 végpont kommunikációja
@@ -21,8 +21,8 @@ Attól függően, hogy milyen kéréssel (metódus) fordulunk a szerver felé, e
 4.	A szerver választ küld a kliensnek. A válasz olyan információkat tartalmaz, amelyek közlik az ügyféllel, hogy a kérés sikeres volt-e. A válasz tartalmazza az ügyfél által kért információkat is.
 
 
-##Mit tartalmaz egy REST API hívás
-###URL:
+## Mit tartalmaz egy REST API hívás
+### URL:
 A szerver minden erőforrást egyedi erőforrás-azonosítókkal azonosít. 
 A REST-szolgáltatások esetében a kiszolgáló általában egy egységes erőforrás-kereső (URL - Uniform Resource Locator) segítségével hajtja végre az erőforrás-azonosítást. 
 Az URL az erőforrás elérési útját adja meg. Az URL hasonló azon webhelyek címéhez, amelyet a böngészőben adunk meg bármely weboldal meglátogatásához. 
@@ -30,7 +30,7 @@ Az URL-t kérés végpontnak is nevezik, és egyértelműen meghatározza a kisz
 
 Például egy webshopból le szeretnénk kérni API-n keresztül az összes terméket, amihez a következő URL-t használjuk: http://webshop.com/termekek
 
-###Metódus:
+### Metódus:
 A HTTP metódus közli a szerverrel, hogy mit kell tennie az erőforrással. 
 Nézzük meg a legáltalánosabb HTTP metódusokat:
 
@@ -52,13 +52,13 @@ Egy termék egy vagy több adatának cseréje. PUT helyett is ezt használják
 Egy termék törlése
 
 
-###HTTP fejlécek
+### HTTP fejlécek
 A kérések fejlécei a kliens és a szerver közötti metaadatok. Például a kérés fejléce jelzi a kérés és a válasz formátumát, információt ad a kérés állapotáról stb:
 -Authorization: hitelesítési token felhasználó azonosításához
 -Content-Type: a küldött adatok formátumának meghatározása (pl. application/json)
 
 
-###Adat
+### Adat
 A REST API kérések tartalmazhatnak adatokat a POST, PUT és más HTTP metódusok sikeres működéséhez.
 A JSON (JavaScript Object Notation) egy általános formátum az adatok REST API-n keresztül történő küldéséhez és kéréséhez.
 
@@ -75,7 +75,7 @@ A JSON egy kulcs-érték párosokból felépülő objektum. Az előző webshopos
 Ezt a JSON formázott szöveget pedig elhelyezhetjük az API kérés törzsében (*body*).
 
 
-###Paraméterek
+### Paraméterek
 A RESTful API kérések tartalmazhatnak olyan paramétereket, amelyek további részleteket adnak a szervernek a teendőkről. Az alábbiakban néhány különböző típusú paraméter található:
 
 Útvonal (path) paraméter amit az URL-ben helyezünk el. Tegyük fel nekem a webshopból szükségem lenne az 1-es azonosítóval ellátott termék részleteire, akkor a következő URL-t kellene megadnom: http://webshop.com/termekek/1
@@ -84,10 +84,10 @@ Lekérdezés (query) paraméter, ami hasonlít az útvonal paraméterhez, de seg
 
 Mint láthatjuk a ferfi-ruházatok rész után következő kérdőjel után sorolhatjuk fel a további paramétereket, & jellel elválasztva egymástól őket.
 
-##Mit tartalmaz egy REST API szerver válasz
+## Mit tartalmaz egy REST API szerver válasz
 A REST alapelvek megkövetelik, hogy a szerver válasza a következő fő összetevőket tartalmazza:
 
-###Állapotkód
+### Állapotkód
 Az állapotsor egy háromjegyű állapotkódot tartalmaz, amely a kérés sikerességét vagy sikertelenségét jelzi. Például a 2XX kód sikert jelez, de a 4XX és 5XX kód hibát jelez. A 3XX kódok az URL-átirányítást jelzik. Nézzük meg a főbb állapotkódokat:
  
 
