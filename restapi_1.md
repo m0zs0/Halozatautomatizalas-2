@@ -135,8 +135,13 @@ A válasz törzs (body) tartalmazza az erőforrás-ábrázolást. A szerver a k�
 
 ##Tesztelés:
 
-**1**
+VSC Thunder client
 
+![KPO feladat megoldása](PICTURES/ThundeClient.PNG)
+
+
+
+**1**
 https://fakestoreapi.com/
 
 ![KPO feladat megoldása](PICTURES/GET_products.PNG)
