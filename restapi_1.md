@@ -133,9 +133,9 @@ Az állapotsor egy háromjegyű állapotkódot tartalmaz, amely a kérés sikere
 A válasz törzs (body) tartalmazza az erőforrás-ábrázolást. A szerver a kérés fejlécek tartalma alapján választ ki egy megfelelő megjelenítési formátumot. Például a kliensek JSON formátumban kérhetnek információkat.
 
 
-##Tesztelés:
+## Tesztelés:
 
-VSC Thunder client
+**VSC Thunder client**
 
 ![Thunder client](PICTURES/ThunderClient.PNG)
 
@@ -169,5 +169,25 @@ https://reqres.in/
 
 **3**
 https://fakerestapi.azurewebsites.net/index.html
+
+**4** Feladatok:
+
+https://hur.webmania.cc/
+  - Mi Szolnok irányítószáma?
+  - Az 5310 irányítószám melyik város irányítószáma?
+  - Hány darab G betűs név van?
+  - Hány darab G betűs női név van?
+
+**5** Meteorológiai API:
+
+https://open-meteo.com/en/docs
+
  
+**Linkek:**
+
+https://kiszervezettmarketing.hu/weboldal-keszites/rest-api/
+
+https://infojegyzet.hu/webszerkesztes/php/restapi/
+
+https://www.youtube.com/watch?v=-lK-TZMrrHQ
 
