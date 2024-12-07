@@ -133,23 +133,36 @@ Az állapotsor egy háromjegyű állapotkódot tartalmaz, amely a kérés sikere
 A válasz törzs (body) tartalmazza az erőforrás-ábrázolást. A szerver a kérés fejlécek tartalma alapján választ ki egy megfelelő megjelenítési formátumot. Például a kliensek JSON formátumban kérhetnek információkat.
 
 
-Tesztelés:
+##Tesztelés:
+
+**1**
+
 https://fakestoreapi.com/
+
 ![KPO feladat megoldása](PICTURES/GET_products.PNG)
+
 ![KPO feladat megoldása](PICTURES/GET_products_2.PNG)
+
 ![KPO feladat megoldása](PICTURES/GET_products_carts.PNG)
+
 ![KPO feladat megoldása](PICTURES/GET_products_categories.PNG)
+
 ![KPO feladat megoldása](PICTURES/GET_products_category_electronics.PNG)
+
 ![KPO feladat megoldása](PICTURES/GET_products_limit_5.PNG)
+
 ![KPO feladat megoldása](PICTURES/POST_products.PNG)
+
 ![KPO feladat megoldása](PICTURES/PATC_products_2.PNG)
+
 ![KPO feladat megoldása](PICTURES/PUT_products_2.PNG)
+
 ![KPO feladat megoldása](PICTURES/DELETE_products_1.PNG)
 
-
-
-
+**2**
 https://reqres.in/
+
+**3**
 https://fakerestapi.azurewebsites.net/index.html
  
 
