@@ -208,11 +208,24 @@ DELETE https://fakerestapi.azurewebsites.net/api/v1/Users/3
 </details>
 
 B csoport
-1. Listázd a könyveket! Hány könyv van?
+<details>
+<summary>1. Listázd a könyveket! Hány könyv van?</summary>
+
+```
 GET https://fakerestapi.azurewebsites.net/api/v1/Books
-2. Listázd a 42 id-jű könyvet! Hány oldala van?
+```
+</details>
+<details>
+<summary>2. Listázd a 42 id-jű könyvet! Hány oldala van?</summary>
+
+```
 GET https://fakerestapi.azurewebsites.net/api/v1/Books/42
-3. Hozd létre a Vuk című könyvet, regény leírással, 189 oldal, "kivonat" kivonattal, a mai dátummal
+```
+</details>
+<details>
+<summary>3. Hozd létre a Vuk című könyvet, regény leírással, 189 oldal, "kivonat" kivonattal, a mai dátummal</summary>
+
+```
 POST https://fakerestapi.azurewebsites.net/api/v1/Books
 {
   "title": "Vuk",
@@ -221,11 +234,22 @@ POST https://fakerestapi.azurewebsites.net/api/v1/Books
   "excerpt": "kivonat",
   "publishDate": "2024-12-11"
 }
-4. A 100 id-jű könyv címét módosítsd  onehundred -re!
-PUT https://fakerestapi.azurewebsites.net/api/v1/Users/100 {"title": "onehundred"}
-5. Töröld a 42 id-jű könyvet
-DELETE https://fakerestapi.azurewebsites.net/api/v1/Books/42
+```
+</details>
+<details>
+<summary>4. A 100 id-jű könyv címét módosítsd  onehundred -re!</summary>
 
+```
+PUT https://fakerestapi.azurewebsites.net/api/v1/Users/100 {"title": "onehundred"}
+```
+</details>
+<details>
+<summary>5. Töröld a 42 id-jű könyvet</summary>
+
+```
+DELETE https://fakerestapi.azurewebsites.net/api/v1/Books/42
+```
+</details>
 
 
 
