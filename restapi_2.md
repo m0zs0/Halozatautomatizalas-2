@@ -1,7 +1,7 @@
 # Valutaváltás
-**Kérj be egy Ft összeget, add meg az aktuális árfolyamon, hogy mennyi Euro-t ér.**
+## Kérj be egy Ft összeget, add meg az aktuális árfolyamon, hogy mennyi Euro-t ér.
 
-## Előkészületek:
+### Előkészületek:
 1. Keressünk REST API-t hozzá:
 
   - pl: https://currencyapi.com/
@@ -42,4 +42,25 @@
 
 ![currencyapi6.PNG](PICTURES/currencyapi6.PNG)
 
+<details>
+<summary>Megoldás</summary>
 
+```py
+import requests
+
+be_huf = int(input("Kérem az átváltandó összeget Ft-ban: "))
+endpoint = "https://api.currencyapi.com/v3/latest"
+apikey="cur_live_7w7VgNsyesqcZlWoa1Cdqm5yUvn7Br7eFCKvVFxx"
+currencies = "HUF"
+base_currency = "EUR"
+
+url = f"{endpoint}?apikey={apikey}&currencies={currencies}&base_currency={base_currency}"
+response = requests.get(url)
+if response.status_code == 200:
+    data = response.json()
+    exchange_rate = data['data']['HUF']['value']
+    print(f"{be_huf} Ft = {be_huf / exchange_rate:.2f} Euro")
+else:
+    print("Nem sikerült az adatlekérés.")
+```
+</details>
