@@ -178,14 +178,34 @@ A csoport
 GET https://fakerestapi.azurewebsites.net/api/v1/Users
 ```
 </details>
- 2. Listázd az 5 id-jű usert! Mi a jelszava?
+<details>
+<summary>2. Listázd az 5 id-jű usert! Mi a jelszava?</summary>
+
+```
 GET https://fakerestapi.azurewebsites.net/api/v1/Users/5
-3. Hozd létre a nagytibi usert, jelszo12 jelszóval
+```
+</details>
+<details>
+<summary>3. Hozd létre a nagytibi usert, jelszo12 jelszóval</summary>
+
+```
 POST https://fakerestapi.azurewebsites.net/api/v1/Users {"id": 0,"userName": "nagytibi","password": "jelszo12"}
-4. A 2 id-jű user nevét módosítsd  ketteske -re, jelszavát pedig jelszo22-re!
+```
+</details>
+<details>
+<summary>4. A 2 id-jű user nevét módosítsd  ketteske -re, jelszavát pedig jelszo22-re!</summary>
+
+```
 PUT https://fakerestapi.azurewebsites.net/api/v1/Users/2 {"password": "jelszo12"}
-5. Töröld a 2 id-jű usert
+```
+</details>
+<details>
+<summary>5. Töröld a 2 id-jű usert</summary>
+
+```
 DELETE https://fakerestapi.azurewebsites.net/api/v1/Users/3
+```
+</details>
 
 B csoport
 1. Listázd a könyveket! Hány könyv van?
