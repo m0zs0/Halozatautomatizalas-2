@@ -1,8 +1,7 @@
-# asdasd
-#Valutaváltás
+# Valutaváltás
 **Kérj be egy Ft összeget, add meg az aktuális árfolyamon, hogy mennyi Euro-t ér.**
 
-##Előkészületek:
+## Előkészületek:
 1. Keressünk REST API-t hozzá:
 
 pl: https://currencyapi.com/
