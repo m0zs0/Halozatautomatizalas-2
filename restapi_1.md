@@ -173,7 +173,10 @@ https://fakerestapi.azurewebsites.net/index.html
 A csoport
 <details>
 <summary>1. Listázd a usereket! Hány User van?</summary>
+
+```
 GET https://fakerestapi.azurewebsites.net/api/v1/Users
+```
 </details>
  2. Listázd az 5 id-jű usert! Mi a jelszava?
 GET https://fakerestapi.azurewebsites.net/api/v1/Users/5
