@@ -6,9 +6,51 @@ https://www.youtube.com/watch?v=GwSnAwsyhZY&list=PLHT5rv7PEE4N3ol8lBoxHBmzWvVW2U
 https://projekt.sulipy.hu/api/api_alapok
 
 *********************************************************************************
+REST API authentikáció:
+
+1. API kulcs az url-ben
+url = "https://api.example.com/data?apikey=a_te_api_kulcsod"
+response = requests.get(url)
+
+
+2. API kulcs a fejlécben:
+headers = {
+    "apikey": "a_te_api_kulcsod"
+}
+response = requests.get(url, headers=headers)
+
+3. Felhasználónév és jelsző
+from requests.auth import HTTPBasicAuth
+response = requests.get(url, auth=HTTPBasicAuth('felhasználónév', 'jelszó'))
+
+
+4. OAuth (Open Authorization)
+OAuth egy nyílt szabvány az engedélyezéshez, amely lehetővé teszi, hogy egy alkalmazás hozzáférjen egy másik alkalmazás erőforrásaihoz a felhasználó nevében, anélkül, hogy megosztaná a felhasználó jelszavát. Az OAuth segítségével a felhasználók engedélyezhetik egy alkalmazás számára, hogy hozzáférjen bizonyos adatokhoz vagy funkciókhoz egy másik alkalmazásban.
+
+Az OAuth folyamatában általában négy szereplő van:
+
+Felhasználó: Az a személy, aki hozzáférést ad az adataihoz.
+Kliens: Az az alkalmazás, amely hozzáférést kér a felhasználó adataihoz.
+Engedélyező szerver: Az a szerver, amely hitelesíti a felhasználót és engedélyezi a hozzáférést.
+Erőforrás szerver: Az a szerver, amely az adatokat tárolja és kiadja a kliensnek az engedélyezés után.
+
+Példa az OAuth használatára:
+Egy webalkalmazás (kliens) szeretne hozzáférni a felhasználó Google Drive fájljaihoz. A felhasználó bejelentkezik a Google fiókjába (engedélyező szerver), és engedélyezi az alkalmazás számára a hozzáférést. Az alkalmazás ezután hozzáférhet a fájlokhoz anélkül, hogy a felhasználó jelszavát ismerné.
+
+https://api.github.com/user 
+
+5. CORS (Cross-Origin Resource Sharing)
+A CORS egy biztonsági mechanizmus, amely lehetővé teszi, hogy egy weboldal erőforrásokat kérjen le egy másik domainről. Alapértelmezés szerint a böngészők csak azonos domainről származó kéréseket engedélyeznek, de a CORS lehetővé teszi, hogy a szerver meghatározza, mely domain-ekről érkező kéréseket engedélyezi. Például, ha egy API támogatja a CORS-t, akkor egy másik domainről is lehet hozzá kéréseket küldeni.
+
+
+
+
+
+
+**********************************************************************************
 import requests #https://www.youtube.com/watch?v=tb8gHvYlCFs&t=429s
 
-# # 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
+## 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
 # response = requests.get("https://randomfox.ca/floof")
 
 # if response.status_code==200:
