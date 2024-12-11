@@ -170,6 +170,40 @@ https://reqres.in/
 **3**
 https://fakerestapi.azurewebsites.net/index.html
 
+A csoport
+1. Listázd a usereket! Hány User van?
+GET https://fakerestapi.azurewebsites.net/api/v1/Users
+2. Listázd az 5 id-jű usert! Mi a jelszava?
+GET https://fakerestapi.azurewebsites.net/api/v1/Users/5
+3. Hozd létre a nagytibi usert, jelszo12 jelszóval
+POST https://fakerestapi.azurewebsites.net/api/v1/Users {"id": 0,"userName": "nagytibi","password": "jelszo12"}
+4. A 2 id-jű user nevét módosítsd  ketteske -re, jelszavát pedig jelszo22-re!
+PUT https://fakerestapi.azurewebsites.net/api/v1/Users/2 {"password": "jelszo12"}
+5. Töröld a 2 id-jű usert
+DELETE https://fakerestapi.azurewebsites.net/api/v1/Users/3
+
+B csoport
+1. Listázd a könyveket! Hány könyv van?
+GET https://fakerestapi.azurewebsites.net/api/v1/Books
+2. Listázd a 42 id-jű könyvet! Hány oldala van?
+GET https://fakerestapi.azurewebsites.net/api/v1/Books/42
+3. Hozd létre a Vuk című könyvet, regény leírással, 189 oldal, "kivonat" kivonattal, a mai dátummal
+POST https://fakerestapi.azurewebsites.net/api/v1/Books
+{
+  "title": "Vuk",
+  "description": "regény",
+  "pageCount": 189,
+  "excerpt": "kivonat",
+  "publishDate": "2024-12-11"
+}
+4. A 100 id-jű könyv címét módosítsd  onehundred -re!
+PUT https://fakerestapi.azurewebsites.net/api/v1/Users/100 {"title": "onehundred"}
+5. Töröld a 42 id-jű könyvet
+DELETE https://fakerestapi.azurewebsites.net/api/v1/Books/42
+
+
+
+
 **4** Feladatok:
 
 https://hur.webmania.cc/
