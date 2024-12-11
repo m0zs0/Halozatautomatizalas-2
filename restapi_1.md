@@ -171,9 +171,11 @@ https://reqres.in/
 https://fakerestapi.azurewebsites.net/index.html
 
 A csoport
-1. Listázd a usereket! Hány User van?
+<details>
+<summary>1. Listázd a usereket! Hány User van?</summary>
 GET https://fakerestapi.azurewebsites.net/api/v1/Users
-2. Listázd az 5 id-jű usert! Mi a jelszava?
+</details>
+ 2. Listázd az 5 id-jű usert! Mi a jelszava?
 GET https://fakerestapi.azurewebsites.net/api/v1/Users/5
 3. Hozd létre a nagytibi usert, jelszo12 jelszóval
 POST https://fakerestapi.azurewebsites.net/api/v1/Users {"id": 0,"userName": "nagytibi","password": "jelszo12"}
