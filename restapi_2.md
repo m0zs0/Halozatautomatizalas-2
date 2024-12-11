@@ -22,7 +22,7 @@
 
 ![currencyapi2.PNG](PICTURES/currencyapi2.PNG)
 
-4. Listázzuk ki a valuta nemeket:
+4. Listázzuk ki a valuta nemeket (Dokumentációt kell megnyitni):
 
 ![currencyapi3.PNG](PICTURES/currencyapi3.PNG)
 
