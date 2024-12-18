@@ -251,9 +251,51 @@ DELETE https://fakerestapi.azurewebsites.net/api/v1/Books/42
 ```
 </details>
 
+**4** 
+https://jsonplaceholder.typicode.com/guide/
+
+<details>
+<summary>1. Listázd a postokat! Hány post van?</summary>
+
+```
+1. Listázd a postokat! Hány post van?
+```
+</details>
+<details>
+<summary>2. Listázd a 41 id-jű postot! Mi a címe?</summary>
+
+```
+2. Listázd a 41 id-jű postot! Mi a címe?
+```
+</details>
+<details>
+<summary>3. Hozz létre 'főcím' című, 'szöveg' tartalmú postot userId = 1 adatokkal!</summary>
+
+```
+3. Hozz létre a 
+
+title: 'foo',
+body: 'bar',
+userId: 1 adatokkal egy új postot!
+```
+</details>
+<details>
+<summary>4. A 22 id-jű post címét állítsd "Nem nehéz a REST API"-ra!</summary>
+
+```
+4. A 22 id-jű post címét állítsd "Nem nehéz a REST API"-ra!
+```
+</details>
+<details>
+<summary>5. Töröld a 2 id-jű postot!</summary>
+
+```
+5. Töröld a 2 id-jű postot!
+```
+</details>
 
 
-**4** Feladatok:
+**5** Feladatok:
 
 https://hur.webmania.cc/
   - Mi Szolnok irányítószáma?
@@ -261,13 +303,13 @@ https://hur.webmania.cc/
   - Hány darab G betűs név van?
   - Hány darab G betűs női név van?
 
-**5** Meteorológiai API:
+**6** Meteorológiai API:
 
 https://open-meteo.com/en/docs
 Kisújszálláson ma milyen hőmérsékletek vannak?
 
 
-**6** Api-k listája:
+**7** Api-k listája:
 
 https://github.com/public-api-lists/public-api-lists
 
