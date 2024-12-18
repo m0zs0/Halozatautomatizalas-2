@@ -258,39 +258,43 @@ https://jsonplaceholder.typicode.com/guide/
 <summary>1. Listázd a postokat! Hány post van?</summary>
 
 ```
-1. Listázd a postokat! Hány post van?
+GET https://jsonplaceholder.typicode.com/posts
 ```
 </details>
 <details>
 <summary>2. Listázd a 41 id-jű postot! Mi a címe?</summary>
 
 ```
-2. Listázd a 41 id-jű postot! Mi a címe?
+GET https://jsonplaceholder.typicode.com/posts/41
 ```
 </details>
 <details>
 <summary>3. Hozz létre 'főcím' című, 'szöveg' tartalmú postot userId = 1 adatokkal!</summary>
 
 ```
-3. Hozz létre a 
-
-title: 'foo',
-body: 'bar',
-userId: 1 adatokkal egy új postot!
+POST https://jsonplaceholder.typicode.com/posts 
+{
+  "title": "főcím",
+  "body": "szöveg",
+  "userId": 1 
+}
 ```
 </details>
 <details>
 <summary>4. A 22 id-jű post címét állítsd "Nem nehéz a REST API"-ra!</summary>
 
 ```
-4. A 22 id-jű post címét állítsd "Nem nehéz a REST API"-ra!
+PUT https://jsonplaceholder.typicode.com/posts/22
+{
+  "title": "Nem nehéz a REST API"
+}
 ```
 </details>
 <details>
 <summary>5. Töröld a 2 id-jű postot!</summary>
 
 ```
-5. Töröld a 2 id-jű postot!
+DELETE https://jsonplaceholder.typicode.com/posts/2
 ```
 </details>
 
