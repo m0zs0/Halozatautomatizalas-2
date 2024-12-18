@@ -295,8 +295,7 @@ userId: 1 adatokkal egy új postot!
 </details>
 
 
-**5** Feladatok:
-
+**5**
 https://hur.webmania.cc/
   - Mi Szolnok irányítószáma?
   - Az 5310 irányítószám melyik város irányítószáma?
