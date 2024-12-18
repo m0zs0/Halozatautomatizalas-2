@@ -1,11 +1,3 @@
-Programozás:
-https://infojegyzet.hu/webszerkesztes/php/restapi/
-https://requests.readthedocs.io/en/latest/
-https://www.youtube.com/watch?v=eVFngZkjTlU&list=PLsYGHuNuBZcYtP1KTqyDtahvFBc0SLKQi&index=1
-https://www.youtube.com/watch?v=GwSnAwsyhZY&list=PLHT5rv7PEE4N3ol8lBoxHBmzWvVW2UwmC&index=1
-https://projekt.sulipy.hu/api/api_alapok
-
-*********************************************************************************
 REST API authentikáció:
 
 1. API kulcs az url-ben
@@ -19,12 +11,16 @@ headers = {
 }
 response = requests.get(url, headers=headers)
 
-3. Felhasználónév és jelsző
+3. Felhasználónév és jelszó
 from requests.auth import HTTPBasicAuth
 response = requests.get(url, auth=HTTPBasicAuth('felhasználónév', 'jelszó'))
 
 
-4. OAuth (Open Authorization)
+4. Személyes Hozzáférési Token (Personal Access Token - Bearer token)
+A felhasználónév és jelszó helyett használható az API hívásokhoz. Biztonságosabb, mint a jelszó használata, mivel a tokenek korlátozott jogosultságokkal rendelkezhetnek.
+Példa: A GitHub API esetében a token a Bearer fejlécben kerül elküldésre.
+
+5. OAuth (Open Authorization)
 OAuth egy nyílt szabvány az engedélyezéshez, amely lehetővé teszi, hogy egy alkalmazás hozzáférjen egy másik alkalmazás erőforrásaihoz a felhasználó nevében, anélkül, hogy megosztaná a felhasználó jelszavát. Az OAuth segítségével a felhasználók engedélyezhetik egy alkalmazás számára, hogy hozzáférjen bizonyos adatokhoz vagy funkciókhoz egy másik alkalmazásban.
 
 Az OAuth folyamatában általában négy szereplő van:
@@ -37,116 +33,111 @@ Erőforrás szerver: Az a szerver, amely az adatokat tárolja és kiadja a klien
 Példa az OAuth használatára:
 Egy webalkalmazás (kliens) szeretne hozzáférni a felhasználó Google Drive fájljaihoz. A felhasználó bejelentkezik a Google fiókjába (engedélyező szerver), és engedélyezi az alkalmazás számára a hozzáférést. Az alkalmazás ezután hozzáférhet a fájlokhoz anélkül, hogy a felhasználó jelszavát ismerné.
 
-https://api.github.com/user 
-
-5. CORS (Cross-Origin Resource Sharing)
+6. CORS (Cross-Origin Resource Sharing)
 A CORS egy biztonsági mechanizmus, amely lehetővé teszi, hogy egy weboldal erőforrásokat kérjen le egy másik domainről. Alapértelmezés szerint a böngészők csak azonos domainről származó kéréseket engedélyeznek, de a CORS lehetővé teszi, hogy a szerver meghatározza, mely domain-ekről érkező kéréseket engedélyezi. Például, ha egy API támogatja a CORS-t, akkor egy másik domainről is lehet hozzá kéréseket küldeni.
 
 
 
+Példa:
+"""
+Github hozzáférés beállítása:
+
+Lépj be a GitHub fiókodba: Nyisd meg a GitHub weboldalt, és jelentkezz be a fiókodba.
+
+-Kattints a jobb felső sarokban lévő profilképedre.
+
+-A legördülő menüben válaszd a "Settings" (Beállítások) lehetőséget.
+
+-A bal oldali menü aljáig görgess le, a "Developer settings" (Fejlesztői beállítások) részhez, és kattints rá.
+
+-Válaszd a "Personal access tokens" (Személyes hozzáférési tokenek) lehetőséget.
+
+-Kattints a "Generate new token" (Új token létrehozása) gombra. Jó a classic.
+
+-Adj nevet a tokennek a "Note" mezőben, hogy később is tudd, mire használod.
+
+-Válaszd ki a szükséges jogosultságokat (repo, user)
+
+-Görgess le az oldal aljára, és kattints a "Generate token" gombra.
+
+-A generált token megjelenik az oldalon. Másold ki ezt a tokent, és tárold biztonságos helyen, mert később nem fogod tudni újra megtekinteni.
 
 
+Tesztelés Thunder Client-ben:
 
-**********************************************************************************
-import requests #https://www.youtube.com/watch?v=tb8gHvYlCFs&t=429s
+-Kattints a "New Request" gombra.
 
-## 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
-# response = requests.get("https://randomfox.ca/floof")
+-Válaszd ki a HTTP metódust (GET).
 
-# if response.status_code==200:
-#     res=response.text
-#     print("response: ")
-#     print(res)
-#     print("json: ")
-#     json=response.json()
-#     print(json)
-#     print("for: ")
-#     for key in json:
-#         print(f"{key} : {json[key]}")
+-Írd be az API URL-t (https://api.github.com/user).
 
-########################
+-Kattints az "Auth" fülre.
 
-#2. példa https://www.youtube.com/watch?v=U7pSXyXt4Uw   ;  https://www.youtube.com/watch?v=Xi1F2ZMAZ7Q  ;   https://www.youtube.com/watch?v=qriL9Qe8pJc  ;
-payload = {"firstName": "John", "lastName": "Smith"}
-res = requests.get('https://httpbin.org/get', params=payload)
-print(res.text)
-print()
-print(res.content)
-print()
-json=res.json()
-print(json)
-print()
-for key in json:
-    print(f"{key} : {json[key]}")
+-Válaszd ki a "Bearer Token" autentikációs típust.
+
+-Másold be a személyes hozzáférési tokent a "Token" mezőbe.
+
+-Kattints a "Send" gombra a kérés elküldéséhez.
 
 
-###############################
-# payload = {"firstName": "John", "lastName": "Smith"}
-# res = requests.post('https://httpbin.org/post', data=payload)
-# print(res.text)
-# print(res.content)
-# json=res.json()
-# print(json)
-# for key in json:
-#     print(f"{key} : {json[key]}")
+Most pedig lássuk hozzá programot:
 
-************************************************************************************
 
-#https://www.youtube.com/watch?v=RDJkoUsdUmg
+<details>
+<summary>Megoldás</summary>
 
+
+```py
 import requests
-import colorama
+import json
+from requests.auth import HTTPBasicAuth
 
-parameters = {"limit": 1}
-response = requests.get("https://fakestoreapi.com/products", params=parameters)
+url = "https://api.github.com/user"
 
-
-if response.status_code==200:
-    res=response.text
-    #print(res)
-    json=response.json()
-    
-    #print(json)
-    for dict in json:
-        for key in dict:
-            print(f"{key}: {dict[key]} ")
+# Auth/Basic
+# username = "m0zs0"
+# password = "****"
+# response = requests.get(url, auth=HTTPBasicAuth(username, password))
 
 
-*************************************************************************************
+# Auth/Bearer token
+bearer_token = "ghp_4ywgCcHs0S5EybqaBwX66fh7sjPBN448krFD"
+headers = {
+    "Authorization": f"Bearer {bearer_token}"
+}
 
-######################
-# Budapest időjárása #
-###################### https://www.youtube.com/watch?v=qJPw_IVEyfc
-#https://openweathermap.org/api
+response = requests.get(url, headers=headers)
 
-import requests
+print(json.dumps(response.json(), indent=4))
 
-#1. geolokáció
-url="http://api.openweathermap.org/geo/1.0/direct"
-my_appid="2b9d8d7ce69ec344a1caac818c0e52c8"
-payload = {"q": "Budapest", "limit": 5, "appid": my_appid}
-
-response = requests.get(url, params=payload)
-if response.status_code == 200:
-    json=response.json()
-    lat=json[0]['lat']
-    lon=json[0]['lon']
-    #print(f"lat: {lat}; lon: {lon}")
+```
+</details>
 
 
-#2. időjárás megállapítása
-url="https://api.openweathermap.org/data/2.5/weather"
-payload={"lat": lat, "lon": lon, "units": "metric", "appid": my_appid}
 
-response = requests.get(url, params=payload)
-if response.status_code == 200:
-    json=response.json()
+Feladatok:
 
-    
+#Időjárás lekérdezése: Kérj be egy magyar városnevet, és add meg az aktuális időjárást. (Használhatod az OpenWeatherMap.org/Current Weather Data API-t.)
 
-    akt_homerseklet = json['main']['temp']
-    min_homerseklet = json['main']['temp_min']
-    max_homerseklet = json['main']['temp_max']
-    wind_speed = json['wind']['speed']
+#Hírek lekérdezése: Kérj be egy kulcsszót, és add meg a legfrissebb magyar híreket ezzel kapcsolatban. (Használhatod a newsapi.org API-t.)
 
-    print(f"{min_homerseklet} <= {akt_homerseklet} <= {max_homerseklet} Celsius;\nSzél: {wind_speed}m/s")
+#Sporteredmények: Kérj be egy sportágat, és add meg a legfrissebb magyar sporteredményeket. (Használhatod a newsapi.org API-t.)
+
+#Könyv keresés: Kérj be egy könyvcímet, és add meg a könyv szerzőjét és rövid leírását. (Használhatod a googleapis.com/books API-t.)
+
+#Recept keresés: Kérj be egy alapanyagot, és add meg a hozzá kapcsolódó recepteket. (Használhatod a Spoonacular.com API-t.)
+
+#Repülőút: Holnap szereték BUDapestről ISTambulba repülni. Javasolj egy járatot, mikor indul és mikor érkezik! (Használhatod a Google Flights API-t - SerpApi)
+
+
+
+Haladó:
+
+#Közlekedési információk: Kérj be egy útvonalat, és add meg az aktuális forgalmi helyzetet. (Használhatod a BKK OpenData API-t; https://opendata.bkk.hu/ api kulcsot innen tudsz szerezni)
+
+#Térkép információk: Kérj be egy helyszínt, és add meg a környékbeli érdekes helyeket. (Használhatod a OpenStreetMap API-t.)
+
+#Moziműsorok: Kérj be egy városnevet, és add meg az aktuális moziműsorokat. (Használhatod a Cinema City API-t.) Először telepítsd a pycin csomagot: pip install pycin
+
+#Álláskeresés: Kérj be egy munkakört, és add meg a legfrissebb állásajánlatokat Magyarországon. (Használhatod a Profession.hu -t.)
+
