@@ -37,13 +37,18 @@ if response.status_code==200:
         print(f"{key} : {json[key]}")
 ```
 
+```py
+# 2. példa https://www.youtube.com/watch?v=U7pSXyXt4Uw   ;  https://www.youtube.com/watch?v=Xi1F2ZMAZ7Q  ;   https://www.youtube.com/watch?v=qriL9Qe8pJc  ;
+import requests
 
-########################
-
-#2. példa https://www.youtube.com/watch?v=U7pSXyXt4Uw   ;  https://www.youtube.com/watch?v=Xi1F2ZMAZ7Q  ;   https://www.youtube.com/watch?v=qriL9Qe8pJc  ;
+base_url = "https://httpbin.org"
+headers = {"User-Agent": "mozso"}
 payload = {"firstName": "John", "lastName": "Smith"}
-res = requests.get('https://httpbin.org/get', params=payload)
+
+res = requests.get(base_url+"/get?test=pro", params=payload)
 print(res.text)
+print()
+print(res.url)
 print()
 print(res.content)
 print()
@@ -52,7 +57,7 @@ print(json)
 print()
 for key in json:
     print(f"{key} : {json[key]}")
-
+```
 
 ###############################
 # payload = {"firstName": "John", "lastName": "Smith"}
