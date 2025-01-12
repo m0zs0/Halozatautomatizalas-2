@@ -60,14 +60,15 @@ for key in json:
 ```
 
 ```py
-# payload = {"firstName": "John", "lastName": "Smith"}
-# res = requests.post('https://httpbin.org/post', data=payload)
-# print(res.text)
-# print(res.content)
-# json=res.json()
-# print(json)
-# for key in json:
-#     print(f"{key} : {json[key]}")
+import requests
+payload = {"firstName": "John", "lastName": "Smith"}
+res = requests.post('https://httpbin.org/post', data=payload)
+print(res.text)
+print(res.content)
+json=res.json()
+print(json)
+for key in json:
+    print(f"{key} : {json[key]}")
 
 ```
 
