@@ -1,17 +1,6 @@
 REST API programozás
 
-forrás: https://requests.readthedocs.io/en/latest/
-
-https://infojegyzet.hu/webszerkesztes/php/restapi/
-
 https://requests.readthedocs.io/en/latest/
-
-https://www.youtube.com/watch?v=eVFngZkjTlU&list=PLsYGHuNuBZcYtP1KTqyDtahvFBc0SLKQi&index=1
-
-https://www.youtube.com/watch?v=GwSnAwsyhZY&list=PLHT5rv7PEE4N3ol8lBoxHBmzWvVW2UwmC&index=1
-
-https://projekt.sulipy.hu/api/api_alapok
-
 
 ```py
 # 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
@@ -134,3 +123,17 @@ if response.status_code == 200:
 
     print(f"{min_homerseklet} <= {akt_homerseklet} <= {max_homerseklet} Celsius;\nSzél: {wind_speed}m/s")
 ```
+
+források
+
+https://requests.readthedocs.io/en/latest/
+
+https://infojegyzet.hu/webszerkesztes/php/restapi/
+
+https://requests.readthedocs.io/en/latest/
+
+https://www.youtube.com/watch?v=eVFngZkjTlU&list=PLsYGHuNuBZcYtP1KTqyDtahvFBc0SLKQi&index=1
+
+https://www.youtube.com/watch?v=GwSnAwsyhZY&list=PLHT5rv7PEE4N3ol8lBoxHBmzWvVW2UwmC&index=1
+
+https://projekt.sulipy.hu/api/api_alapok
