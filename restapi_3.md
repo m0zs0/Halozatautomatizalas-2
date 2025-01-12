@@ -60,6 +60,7 @@ for key in json:
 ```
 
 ```py
+#3. példa
 import requests
 payload = {"firstName": "John", "lastName": "Smith"}
 res = requests.post('https://httpbin.org/post', data=payload)
@@ -72,6 +73,8 @@ for key in json:
 
 ```
 
+```py
+#4. példa
 #https://www.youtube.com/watch?v=RDJkoUsdUmg
 
 import requests
@@ -90,10 +93,10 @@ if response.status_code==200:
     for dict in json:
         for key in dict:
             print(f"{key}: {dict[key]} ")
+```
 
-
-*************************************************************************************
-
+```py
+#5. példa
 ######################
 # Budapest időjárása #
 ###################### https://www.youtube.com/watch?v=qJPw_IVEyfc
@@ -130,3 +133,4 @@ if response.status_code == 200:
     wind_speed = json['wind']['speed']
 
     print(f"{min_homerseklet} <= {akt_homerseklet} <= {max_homerseklet} Celsius;\nSzél: {wind_speed}m/s")
+```
