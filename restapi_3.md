@@ -1,28 +1,42 @@
 REST API programozás
 
+forrás: https://requests.readthedocs.io/en/latest/
 
 https://infojegyzet.hu/webszerkesztes/php/restapi/
+
 https://requests.readthedocs.io/en/latest/
+
 https://www.youtube.com/watch?v=eVFngZkjTlU&list=PLsYGHuNuBZcYtP1KTqyDtahvFBc0SLKQi&index=1
+
 https://www.youtube.com/watch?v=GwSnAwsyhZY&list=PLHT5rv7PEE4N3ol8lBoxHBmzWvVW2UwmC&index=1
+
 https://projekt.sulipy.hu/api/api_alapok
 
-*********************************************************************************
-import requests #https://www.youtube.com/watch?v=tb8gHvYlCFs&t=429s
 
-# # 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
-# response = requests.get("https://randomfox.ca/floof")
+```py
+# 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
+import requests 
 
-# if response.status_code==200:
-#     res=response.text
-#     print("response: ")
-#     print(res)
-#     print("json: ")
-#     json=response.json()
-#     print(json)
-#     print("for: ")
-#     for key in json:
-#         print(f"{key} : {json[key]}")
+response = requests.get("https://randomfox.ca/floof")
+print(response)
+print(response.status_code)
+print(response.text)
+print(response.content)
+print(response.ok)
+print(response.headers)
+
+if response.status_code==200:
+    res=response.text
+    print("response: ")
+    print(res)
+    print("json: ")
+    json=response.json()
+    print(json)
+    print("for: ")
+    for key in json:
+        print(f"{key} : {json[key]}")
+```
+
 
 ########################
 
