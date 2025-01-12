@@ -59,7 +59,7 @@ for key in json:
     print(f"{key} : {json[key]}")
 ```
 
-###############################
+```py
 # payload = {"firstName": "John", "lastName": "Smith"}
 # res = requests.post('https://httpbin.org/post', data=payload)
 # print(res.text)
@@ -69,7 +69,7 @@ for key in json:
 # for key in json:
 #     print(f"{key} : {json[key]}")
 
-************************************************************************************
+```
 
 #https://www.youtube.com/watch?v=RDJkoUsdUmg
 
