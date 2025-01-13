@@ -1,10 +1,19 @@
 # REST API programozás
 
-## A Request telepítéséhez egyszerűen futtasd a következő parancsot a terminálon:
+## A Request telepítéséhez egyszerűen futtasd a következő parancsot a terminálon
 
 ```python -m pip install requests```
 
-https://requests.readthedocs.io/en/latest/
+Importáld a Requests modult
+
+```import requests```
+
+Próbáld ki az API hívást:
+
+```response = requests.get("https://randomfox.ca/floof")```
+
+Innentől minden benne lesz a response objektumban.
+
 
 ```py
 # 1. példa https://www.youtube.com/watch?v=hpc5jyVpUpw
