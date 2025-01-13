@@ -1,4 +1,8 @@
-REST API programozás
+# REST API programozás
+
+## A Request telepítéséhez egyszerűen futtasd a következő parancsot a terminálon:
+
+```python -m pip install requests```
 
 https://requests.readthedocs.io/en/latest/
 
