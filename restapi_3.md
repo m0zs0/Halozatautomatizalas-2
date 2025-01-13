@@ -19,6 +19,17 @@ response = requests.delete('https://httpbin.org/delete')
 
 Innentől minden benne lesz a `response` objektumban.
 
+## Paraméterek átadása URL-ekben
+```
+httpbin.org/get?key=val
+```
+helyett:
+```
+payload = {'key1': 'value1', 'key2': 'value2'}
+response = requests.get('https://httpbin.org/get', params=payload)
+```
+ezt le is ellenőrízheted a `print(response.url)` paranccsal.
+
 ## API kérések programozása
 
 
