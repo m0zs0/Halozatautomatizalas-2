@@ -8,11 +8,18 @@ Importáld a Requests modult
 
 ```import requests```
 
-Próbáld ki az API hívást:
+Próbáld ki az alábbi API hívások egyikét:
 
-```response = requests.get("https://randomfox.ca/floof")```
+```
+response = requests.get("https://httpbin.org/get")
+response = requests.post('https://httpbin.org/post', data={'key': 'value'})
+response = requests.put('https://httpbin.org/put', data={'key': 'value'})
+response = requests.delete('https://httpbin.org/delete')
+```
 
-Innentől minden benne lesz a response objektumban.
+Innentől minden benne lesz a `response` objektumban.
+
+## API kérések programozása
 
 
 ```py
