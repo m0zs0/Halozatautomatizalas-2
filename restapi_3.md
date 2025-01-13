@@ -47,7 +47,7 @@ print(response.json())
 
 ## Egyéni fejlécek megadása
 
-```
+```py
 url = 'https://api.github.com/some/endpoint'
 headers = {'user-agent': 'my-app/0.0.1'}
 response = requests.get(url, headers=headers)
