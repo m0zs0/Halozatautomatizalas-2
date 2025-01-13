@@ -52,8 +52,16 @@ url = 'https://api.github.com/some/endpoint'
 headers = {'user-agent': 'my-app/0.0.1'}
 response = requests.get(url, headers=headers)
 ```
+## Fájl feltöltése
 
+```py
+url = 'https://httpbin.org/post'
+files = {'file': open('preconf.cfg', 'rb')}
+#files = {'file': ('preconf.csv', 'hostname R1\n,configure terminal\n,interface GigabitEthernet 0/0\n,ip address 192.168.1.1 255.255.255.0')}
 
+response = requests.post(url, files=files)
+print(response.text)
+```
 
 ## API kérések programozása
 
