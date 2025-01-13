@@ -30,6 +30,31 @@ response = requests.get('https://httpbin.org/get', params=payload)
 ```
 ezt le is ellenőrízheted a `print(response.url)` paranccsal.
 
+## A `response` feldolgozása
+
+```py
+import requests
+
+response = requests.get("https://httpbin.org/get")
+print(response)
+print(response.status_code)
+print(response.ok)
+print(response.text)
+print(response.content) #bájt formátum
+print(response.headers)
+print(response.json())
+```
+
+## Egyéni fejlécek megadása
+
+```
+url = 'https://api.github.com/some/endpoint'
+headers = {'user-agent': 'my-app/0.0.1'}
+response = requests.get(url, headers=headers)
+```
+
+
+
 ## API kérések programozása
 
 
