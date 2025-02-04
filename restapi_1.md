@@ -325,3 +325,6 @@ https://infojegyzet.hu/webszerkesztes/php/restapi/
 
 https://www.youtube.com/watch?v=-lK-TZMrrHQ
 
+API tesztelés 
+https://www.youtube.com/watch?v=hvSlWnLiK_U&list=PLimzEeSv6f4Vk6cXGpoGU2ZhNcyI5rzTp
+
